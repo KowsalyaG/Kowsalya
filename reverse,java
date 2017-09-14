@@ -25,7 +25,7 @@ public class solution {
 	private static void reverseVowels(char[] s1) {
 		// TODO Auto-generated method stub
 		for (char s : s1) {
-			if (s != 'a' && s != 'e' && s != 'i' && s != 'o' && s != 'u') {
+			if (s != 'a' && s != 'e' && s != 'i' && s != 'o' && s != 'u' && s != 'A' && s != 'E' && s != 'I' && s != 'O' && s != 'U' ) {
 				System.out.print(s);
 			}
 		}
