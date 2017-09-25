@@ -1,5 +1,6 @@
 #include<stdio.h>
-#include <stdlib.h>
+#include<stdlib.h>
+#include<string.h>
 int main(){
     int i,*arr,len,max=-1,*hash;
     scanf("%d",&len);
@@ -16,6 +17,10 @@ int main(){
     
     //Dynamically allocating memory for hash map
     hash = (int*) malloc(max * sizeof(int));
+    
+    //Initialize hash array with 0
+    for(i=0;i<len;i++)
+    hash[arr[i]]=0;
     
     //Traversing the array and using hash map, finding the duplicates in the array
     for(i=0;i<len;i++){
