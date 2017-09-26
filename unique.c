@@ -1,16 +1,14 @@
 #include<stdio.h>
 #include<stdlib.h>
-
-
 int main(){
-    int i,*arr,len,temp,j;
+    int i,*a,len,temp,j;
     scanf("%d",&len);
     
     //Dynamically allocating memory for array
-    arr = (int*) malloc(len * sizeof(int));
+    a = (int*) malloc(len * sizeof(int));
     
     for(i=0;i<len;i++){
-        scanf("%d",&arr[i]);
+        scanf("%d",&a[i]);
     }
     
     //Sort the array
@@ -18,11 +16,11 @@ int main(){
     {
         for (j=0;j<len-1;j++)
         {
-            if(arr[j]>arr[j+1])
+            if(a[j]>a[j+1])
             {
-                temp=arr[j];
-                arr[j]=arr[j+1];
-                arr[j+1]=temp;
+                temp=a[j];
+                a[j]=a[j+1];
+                a[j+1]=temp;
             }
         }
     }
@@ -30,8 +28,8 @@ int main(){
     //Traversing the array, finding the unique integer as mentioned in the question the number must appear exactly twice 
     //except one unique number
     for(i=0;i<len-1;i+=2){
-        if(arr[i]!=arr[i+1]){
-            printf("%d is the unique number\n",arr[i]);
+        if(a[i]!=a[i+1]){
+            printf("%d is the unique number\n",a[i]);
             break;
         }
     }
